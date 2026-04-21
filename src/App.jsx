@@ -3,7 +3,7 @@ import { Mail, Phone, Menu, X, MapPin, GraduationCap, Briefcase, Book } from 'lu
 import awsIcon from '/aws.svg'
 import cxc from '/cxc.jpeg'
 import github from '/github.svg'
-import graduation from '/graduation.jpg'
+import graduation from '/graduation.png'
 import habit1 from '/habit1.jpeg'
 import hero from '/hero.jpg'
 import java from '/java.svg'
@@ -295,123 +295,106 @@ function App() {
     </section>
   </Reveal>
   
-    <Reveal>
-<section id="projects" className="py-16 lg:py-24 px-4 lg:px-6 bg-white">
-  <div className="max-w-7xl mx-auto">
-    
-    {/* GRID MAESTRO: 2 columnas en móvil, 11 en desktop */}
-    <div className="grid grid-cols-2 lg:grid-cols-11 gap-4 lg:gap-8 items-start">
+ <Reveal>
+  <section id="projects" className="py-16 lg:py-24 px-4 lg:px-6 bg-white">
+    <div className="max-w-7xl mx-auto">
       
-      {/* COLUMNA 1: Título y Párrafo */}
-      <div className="col-span-2 lg:col-span-3 pt-2 mb-6 lg:mb-0">
-        <h2 className="text-4xl lg:text-[3.5rem] font-black text-[#0B1221] leading-tight mb-4 lg:mb-6 tracking-tight">
-          Explore My<br />Projects
-        </h2>
-        <p className="text-base lg:text-lg text-slate-600 leading-relaxed font-medium pr-2">
-          A showcase of responsive platforms and full-stack applications. Explore the architecture, technologies, and problem-solving approach behind each digital solution.
-        </p>
-      </div>
-
-      {/* WRAPPER 1: En móvil se "desvanece" (contents), en Desktop es columna (flex) */}
-      <div className="contents lg:flex lg:flex-col lg:col-span-4 lg:gap-8">
+      {/* GRID MAESTRO */}
+      <div className="grid grid-cols-2 lg:grid-cols-11 gap-4 lg:gap-8 items-start">
         
-        <button
-       onClick={() => setActiveModal('project_templo')}
-        >
-        <div className="col-span-2 order-1 lg:order-none bg-[#0A192F] rounded-[1.5rem] lg:rounded-[2rem] p-4 lg:p-6 text-white h-[140px] sm:h-[180px] lg:h-[260px] flex items-center justify-between shadow-xl">
-          <div className="z-10 w-[55%] lg:w-[50%] pl-1 lg:pl-2">
-            <h3 className="text-sm sm:text-base lg:text-xl font-bold leading-tight mb-2 lg:mb-4">Templo Misericordia Web Platform</h3>
-            <div className="flex gap-2 lg:gap-3">
-              <img src="https://cdn.simpleicons.org/react/white" className="w-4 h-4 lg:w-5 lg:h-5" alt="React" />
-              <img src="https://cdn.simpleicons.org/tailwindcss/white" className="w-4 h-4 lg:w-5 lg:h-5" alt="Tailwind" />
-            </div>
-          </div>
-          <div className="w-[40%] lg:w-[45%] h-full rounded-xl lg:rounded-2xl overflow-hidden shadow-lg">
-            <img 
-              src="https://images.unsplash.com/photo-1659386774021-c1f76676bf7b?q=80&w=1470&auto=format&fit=crop" 
-              className="w-full h-full object-cover" 
-              alt="Stained Glass" 
-            />
-          </div>
+        {/* COLUMNA 1: Título */}
+        <div className="col-span-2 lg:col-span-3 pt-2 mb-6 lg:mb-0">
+          <h2 className="text-4xl lg:text-[3.5rem] font-black text-[#0B1221] leading-tight mb-4 lg:mb-6 tracking-tight">
+            Explore My<br />Projects
+          </h2>
+          <p className="text-base lg:text-lg text-slate-600 leading-relaxed font-medium pr-2">
+           A showcase of responsive platforms and full-stack applications. Explore the architecture, technologies, and problem-solving approach behind each digital solution.
+          </p>
         </div>
-      </button>
 
-      <button
-      onClick={() => setActiveModal('project_erp')}
-      >
-        <div className="col-span-1 order-2 lg:order-none bg-[#0A192F] rounded-[1.5rem] lg:rounded-[2rem] p-4 lg:p-6 text-white h-[200px] sm:h-[240px] lg:h-[400px] flex flex-col shadow-xl">
-          <div className="z-10 text-center mb-3 lg:mb-6 pt-1 lg:pt-2">
-            <h3 className="text-[0.7rem] sm:text-sm lg:text-xl font-bold mb-2 lg:mb-4 leading-tight">Corporate ERP System Integrations</h3>
-            <div className="flex justify-center items-center gap-1.5 lg:gap-3">
-              <span className="text-[10px] lg:text-sm font-bold">C#</span>
-              <img src="https://cdn.simpleicons.org/bootstrap/white" className="w-3 h-3 lg:w-5 lg:h-5" alt="Bootstrap" />
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-3 h-3 lg:w-5 lg:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>
+        {/* WRAPPER 1 */}
+        <div className="contents lg:flex lg:flex-col lg:col-span-4 lg:gap-8">
+          
+          {/* Tarjeta 1: Templo - El botón ahora tiene las clases de grid */}
+          <button
+            onClick={() => setActiveModal('project_templo')}
+            className="col-span-2 order-1 lg:order-none bg-[#0A192F] rounded-[1.5rem] lg:rounded-[2rem] p-4 lg:p-6 text-white h-[140px] sm:h-[180px] lg:h-[260px] flex items-center justify-between shadow-xl transition-transform hover:scale-[1.02] active:scale-95 text-left"
+          >
+            <div className="z-10 w-[55%] lg:w-[50%] pl-1 lg:pl-2">
+              <h3 className="text-sm sm:text-base lg:text-xl font-bold leading-tight mb-2 lg:mb-4">Templo Misericordia Web Platform</h3>
+              <div className="flex gap-2 lg:gap-3">
+                <img src="https://cdn.simpleicons.org/react/white" className="w-4 h-4 lg:w-5 lg:h-5" alt="React" />
+                <img src="https://cdn.simpleicons.org/tailwindcss/white" className="w-4 h-4 lg:w-5 lg:h-5" alt="Tailwind" />
+              </div>
             </div>
-          </div>
-          <div className="flex-1 w-full rounded-xl lg:rounded-2xl overflow-hidden shadow-lg">
-            <img 
-              src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1470&auto=format&fit=crop" 
-              className="w-full h-full object-cover" 
-              alt="Networking" 
-            />
-          </div>
+            <div className="w-[40%] lg:w-[45%] h-full rounded-xl lg:rounded-2xl overflow-hidden shadow-lg">
+              <img src="https://images.unsplash.com/photo-1659386774021-c1f76676bf7b?q=80&w=1470&auto=format&fit=crop" className="w-full h-full object-cover" alt="Stained Glass" />
+            </div>
+          </button>
+
+          {/* Tarjeta 2: ERP */}
+          <button
+            onClick={() => setActiveModal('project_erp')}
+            className="col-span-1 order-2 lg:order-none bg-[#0A192F] rounded-[1.5rem] lg:rounded-[2rem] p-4 lg:p-6 text-white h-[200px] sm:h-[240px] lg:h-[400px] flex flex-col shadow-xl transition-transform hover:scale-[1.02] active:scale-95 text-left"
+          >
+            <div className="z-10 text-center mb-3 lg:mb-6 pt-1 lg:pt-2 w-full">
+              <h3 className="text-[0.7rem] sm:text-sm lg:text-xl font-bold mb-2 lg:mb-4 leading-tight">Corporate ERP System Integrations</h3>
+              <div className="flex justify-center items-center gap-1.5 lg:gap-3">
+                <span className="text-[10px] lg:text-sm font-bold">C#</span>
+                <img src="https://cdn.simpleicons.org/bootstrap/white" className="w-3 h-3 lg:w-5 lg:h-5" alt="Bootstrap" />
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-3 h-3 lg:w-5 lg:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>
+              </div>
+            </div>
+            <div className="flex-1 w-full rounded-xl lg:rounded-2xl overflow-hidden shadow-lg">
+              <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1470&auto=format&fit=crop" className="w-full h-full object-cover" alt="Networking" />
+            </div>
+          </button>
         </div>
-        </button>
+
+        {/* WRAPPER 2 */}
+        <div className="contents lg:flex lg:flex-col lg:col-span-4 lg:gap-8">
+          
+          {/* Tarjeta 3: POS */}
+          <button
+            onClick={() => setActiveModal('project_pos')}
+            className="col-span-1 order-3 lg:order-none bg-[#0A192F] rounded-[1.5rem] lg:rounded-[2rem] p-4 lg:p-6 text-white h-[200px] sm:h-[240px] lg:h-[440px] flex flex-col shadow-xl transition-transform hover:scale-[1.02] active:scale-95 text-left"
+          >
+            <div className="z-10 text-center mb-3 lg:mb-6 pt-1 lg:pt-2 w-full">
+              <h3 className="text-[0.7rem] sm:text-sm lg:text-xl font-bold mb-2 lg:mb-4 leading-tight">Full-Stack Retail POS System</h3>
+              <div className="flex justify-center flex-wrap gap-1.5 lg:gap-3 mb-1 lg:mb-2">
+                <img src="https://cdn.simpleicons.org/react/white" className="w-3 h-3 lg:w-5 lg:h-5" alt="React" />
+                <img src="https://cdn.simpleicons.org/tailwindcss/white" className="w-3 h-3 lg:w-5 lg:h-5" alt="Tailwind" />
+                <img src="https://cdn.simpleicons.org/mongodb/white" className="w-3 h-3 lg:w-5 lg:h-5" alt="MongoDB" />
+                <img src="https://cdn.simpleicons.org/nodedotjs/white" className="w-3 h-3 lg:w-5 lg:h-5" alt="Node" />
+              </div>
+            </div>
+            <div className="flex-1 w-full rounded-xl lg:rounded-2xl overflow-hidden shadow-lg">
+              <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=1470&auto=format&fit=crop" className="w-full h-full object-cover" alt="Retail POS" />
+            </div>
+          </button>
+
+          {/* Tarjeta 4: Productivity */}
+          <button
+            onClick={() => setActiveModal('project_productivity')}
+            className="col-span-2 order-4 lg:order-none bg-[#0A192F] rounded-[1.5rem] lg:rounded-[2rem] p-4 lg:p-6 text-white h-[140px] sm:h-[180px] lg:h-[220px] relative shadow-xl flex items-center lg:items-start justify-between lg:justify-start transition-transform hover:scale-[1.02] active:scale-95 text-left"
+          >
+            <div className="z-10 w-[55%] relative pl-1 lg:pl-2 lg:pt-2">
+              <h3 className="text-sm sm:text-base lg:text-[1.15rem] font-bold leading-tight mb-2 lg:mb-4">Productivity & Habit Tracking App</h3>
+              <div className="flex gap-2 lg:gap-3">
+                <img src="https://cdn.simpleicons.org/react/white" className="w-4 h-4 lg:w-5 lg:h-5" alt="React" />
+                <img src="https://cdn.simpleicons.org/tailwindcss/white" className="w-4 h-4 lg:w-5 lg:h-5" alt="Tailwind" />
+                <img src="https://cdn.simpleicons.org/vite/white" className="w-4 h-4 lg:w-5 lg:h-5" alt="Vite" />
+              </div>
+            </div>
+            <div className="w-[40%] h-full relative lg:absolute lg:right-6 lg:bottom-6 lg:w-[40%] lg:h-[60%] rounded-xl lg:rounded-2xl overflow-hidden shadow-lg">
+              <img src="https://images.unsplash.com/photo-1626957902611-81189024dd78?q=80&w=1503&auto=format&fit=crop" className="w-full h-full object-cover lg:absolute lg:inset-0" alt="Mountain" />
+            </div>
+          </button>
+        </div>
+
       </div>
-
-      {/* WRAPPER 2: En móvil se "desvanece" (contents), en Desktop es columna (flex) */}
-      <div className="contents lg:flex lg:flex-col lg:col-span-4 lg:gap-8">
-        
-        <button
-        onClick={() => setActiveModal('project_pos')}
-        >
-        <div className="col-span-1 order-3 lg:order-none bg-[#0A192F] rounded-[1.5rem] lg:rounded-[2rem] p-4 lg:p-6 text-white h-[200px] sm:h-[240px] lg:h-[440px] flex flex-col shadow-xl">
-          <div className="z-10 text-center mb-3 lg:mb-6 pt-1 lg:pt-2">
-            <h3 className="text-[0.7rem] sm:text-sm lg:text-xl font-bold mb-2 lg:mb-4 leading-tight">Full-Stack Retail POS System</h3>
-            <div className="flex justify-center flex-wrap gap-1.5 lg:gap-3 mb-1 lg:mb-2">
-              <img src="https://cdn.simpleicons.org/react/white" className="w-3 h-3 lg:w-5 lg:h-5" alt="React" />
-              <img src="https://cdn.simpleicons.org/tailwindcss/white" className="w-3 h-3 lg:w-5 lg:h-5" alt="Tailwind" />
-              <img src="https://cdn.simpleicons.org/mongodb/white" className="w-3 h-3 lg:w-5 lg:h-5" alt="MongoDB" />
-              <img src="https://cdn.simpleicons.org/nodedotjs/white" className="w-3 h-3 lg:w-5 lg:h-5" alt="Node" />
-            </div>
-          </div>
-          <div className="flex-1 w-full rounded-xl lg:rounded-2xl overflow-hidden shadow-lg">
-            <img 
-              src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=1470&auto=format&fit=crop" 
-              className="w-full h-full object-cover" 
-              alt="Retail POS" 
-            />
-          </div>
-        </div>
-        </button>
-
-     <button
-        onClick={() => setActiveModal('project_productivity')}
-        >
-        <div className="col-span-2 order-4 lg:order-none bg-[#0A192F] rounded-[1.5rem] lg:rounded-[2rem] p-4 lg:p-6 text-white h-[140px] sm:h-[180px] lg:h-[220px] relative shadow-xl flex items-center lg:items-start justify-between lg:justify-start">
-          <div className="z-10 w-[55%] relative pl-1 lg:pl-2 lg:pt-2">
-            <h3 className="text-sm sm:text-base lg:text-[1.15rem] font-bold leading-tight mb-2 lg:mb-4">Productivity & Habit Tracking App</h3>
-            <div className="flex gap-2 lg:gap-3">
-              <img src="https://cdn.simpleicons.org/react/white" className="w-4 h-4 lg:w-5 lg:h-5" alt="React" />
-              <img src="https://cdn.simpleicons.org/tailwindcss/white" className="w-4 h-4 lg:w-5 lg:h-5" alt="Tailwind" />
-              <img src="https://cdn.simpleicons.org/vite/white" className="w-4 h-4 lg:w-5 lg:h-5" alt="Vite" />
-            </div>
-          </div>
-          <div className="w-[40%] h-full relative lg:absolute lg:right-6 lg:bottom-6 lg:w-[40%] lg:h-[60%] rounded-xl lg:rounded-2xl overflow-hidden shadow-lg">
-            <img 
-              src="https://images.unsplash.com/photo-1626957902611-81189024dd78?q=80&w=1503&auto=format&fit=crop" 
-              className="w-full h-full object-cover lg:absolute lg:inset-0" 
-              alt="Mountain" 
-            />
-          </div>
-        </div>
-
-        </button>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
 </Reveal>
 
  <Reveal>
@@ -429,11 +412,11 @@ function App() {
   { name: 'Node.js', slug: 'nodedotjs' },
   { name: 'ASP.NET', slug: 'dotnet' },
   { name: 'Laravel', slug: 'laravel' },
-  { name: 'Java', customUrl: {java}},
+  { name: 'Java', customUrl: java},
   { name: 'Python', slug: 'python' },
   { name: 'MongoDB', slug: 'mongodb' },
-  { name: 'SQL Server', customUrl: {sql} }, // Importación local
-  { name: 'AWS', customUrl: {awsIcon} },       // Importación local
+  { name: 'SQL Server', customUrl: sql}, // Importación local
+  { name: 'AWS', customUrl: awsIcon},       // Importación local
   { name: 'Docker', slug: 'docker' },
   { name: 'Kubernetes', slug: 'kubernetes' },
   { name: 'Git', slug: 'git' },
@@ -1211,9 +1194,7 @@ function App() {
             )}
           </div>
         </div>
-      )}
-      
-      
+      )}    
     </div>
   );
 }
