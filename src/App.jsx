@@ -3,7 +3,7 @@ import { Mail, Phone, Menu, X, MapPin, GraduationCap, Briefcase, Book } from 'lu
 import awsIcon from '/aws.svg'
 import cxc from '/cxc.jpeg'
 import github from '/github.svg'
-import graduation from '/graduation.JPG'
+import graduation from '/graduation.jpg'
 import habit1 from '/habit1.jpeg'
 import hero from '/hero.jpg'
 import java from '/java.svg'
