@@ -1,6 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Mail, Phone, Menu, X, MapPin, GraduationCap, Briefcase, Book } from 'lucide-react';
-
+import awsIcon from '/aws.svg'
+import cxc from '/cxc.jpeg'
+import github from '/github.svg'
+import graduation from '/graduation.JPG'
+import habit1 from '/habit1.jpeg'
+import hero from '/hero.jpg'
+import java from '/java.svg'
+import linkedin from '/linkedin.svg'
+import login from '/login.jpeg'
+import me from '/me.jpeg'
+import records from '/records.jpeg'
+import sql from '/sql.svg'
 
 const Reveal = ({ children, delay = 0 }) => {
   const ref = useRef(null);
@@ -11,10 +22,10 @@ const Reveal = ({ children, delay = 0 }) => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect(); // Solo se anima la primera vez que bajas
+          observer.disconnect(); 
         }
       },
-      { threshold: 0.15 } // Se activa cuando el 15% del elemento es visible
+      { threshold: 0.15 } 
     );
 
     if (ref.current) observer.observe(ref.current);
@@ -169,7 +180,7 @@ function App() {
           <div className="bg-brand-nav rounded-3xl w-full max-w-[320px] md:max-w-[380px] h-[450px] md:h-[550px] relative overflow-hidden shadow-2xl hover:shadow-brand-blue/20 transition-shadow duration-500">
             
             <img 
-              src="/hero.jpg" 
+              src={hero}
               alt="Rafael Rico" 
               className="absolute bottom-0 w-full h-auto object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-500"
             />
@@ -185,7 +196,7 @@ function App() {
   >
     {/* Imagen importada desde la carpeta public */}
     <img 
-      src="/linkedin.svg" 
+      src={linkedin}
       alt="LinkedIn" 
       className="w-7 h-7 object-contain" 
     /> 
@@ -418,11 +429,11 @@ function App() {
   { name: 'Node.js', slug: 'nodedotjs' },
   { name: 'ASP.NET', slug: 'dotnet' },
   { name: 'Laravel', slug: 'laravel' },
-  { name: 'Java', customUrl: '/java.svg' },
+  { name: 'Java', customUrl: {java}},
   { name: 'Python', slug: 'python' },
   { name: 'MongoDB', slug: 'mongodb' },
-  { name: 'SQL Server', customUrl: '/sql.svg' }, // Importación local
-  { name: 'AWS', customUrl: '/aws.svg' },       // Importación local
+  { name: 'SQL Server', customUrl: {sql} }, // Importación local
+  { name: 'AWS', customUrl: {awsIcon} },       // Importación local
   { name: 'Docker', slug: 'docker' },
   { name: 'Kubernetes', slug: 'kubernetes' },
   { name: 'Git', slug: 'git' },
@@ -460,7 +471,7 @@ function App() {
         {/* Contenedor de Imagen */}
         <div className="h-[280px] w-full bg-slate-200">
           <img 
-            src="/graduation.JPG" 
+            src={graduation} 
             className="w-full h-full object-cover" 
             alt="Graduation Ceremony" 
           />
@@ -501,7 +512,7 @@ function App() {
           {/* Contenedor de Imagen Derecha */}
           <div className="w-full sm:w-[180px] h-[200px] shrink-0 rounded-2xl overflow-hidden bg-slate-200">
             <img 
-              src="/me.jpeg" 
+              src={me}
               className="w-full h-full object-cover" 
               alt="Signing Document" 
             />
@@ -581,7 +592,7 @@ function App() {
       <div className="flex items-center gap-4">
       <a href="https://www.linkedin.com/in/rafael-rico-ayala/" target="_blank" rel="noreferrer" className="group flex items-center gap-4 text-xl font-medium hover:text-blue-400 transition-colors">
           <img 
-            src="/linkedin.svg" 
+            src={linkedin}
             alt="Linkedin" 
             className="w-7 h-7 brightness-0 invert group-hover:invert-0 group-hover:brightness-100 group-hover:sepia group-hover:hue-rotate-190 group-hover:saturate-500 transition-all" 
           />
@@ -593,7 +604,7 @@ function App() {
       <div className="flex items-center gap-4">
        <a href="https://github.com/rafarico30" target="_blank" rel="noreferrer" className="group flex items-center gap-4 text-xl font-medium hover:text-blue-400 transition-colors">
           <img 
-            src="/github.svg" 
+            src={github} 
             alt="GitHub" 
             className="w-7 h-7 brightness-0 invert group-hover:invert-0 group-hover:brightness-100 group-hover:sepia group-hover:hue-rotate-190 group-hover:saturate-500 transition-all" 
           />
@@ -1046,13 +1057,13 @@ function App() {
                   <div className="flex flex-col items-center">
                     <p className="font-bold mb-3 text-slate-800">Login</p>
                     <a 
-                      href="/login.jpeg" 
+                      href={login}
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="block w-full overflow-hidden rounded-xl border border-slate-200 shadow-sm hover:shadow-lg transition-shadow bg-slate-100 min-h-[200px]"
                     >
                       <img 
-                        src="/login.jpeg" 
+                        src={login}
                         alt="Login" 
                         className="w-full h-auto hover:scale-105 transition-transform duration-500" 
                       />
@@ -1064,13 +1075,13 @@ function App() {
                   <div className="flex flex-col items-center">
                     <p className="font-bold mb-3 text-slate-800">Dashboard View</p>
                     <a 
-                      href="/habit1.jpeg" 
+                      href={habit1}
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="block w-full overflow-hidden rounded-xl border border-slate-200 shadow-sm hover:shadow-lg transition-shadow bg-slate-100 min-h-[200px]"
                     >
                       <img 
-                        src="/habit1.jpeg" 
+                        src={habit1} 
                         alt="Dashboard view" 
                         className="w-full h-auto hover:scale-105 transition-transform duration-500" 
                       />
@@ -1152,13 +1163,13 @@ function App() {
                   <div className="flex flex-col items-center">
                     <p className="font-bold mb-3 text-slate-800">Accounts Receivable (CXC)</p>
                     <a 
-                      href="/cxc.jpeg" 
+                      href={cxc} 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="block w-full overflow-hidden rounded-xl border border-slate-200 shadow-sm hover:shadow-lg transition-shadow bg-slate-50 min-h-[180px]"
                     >
                       <img 
-                        src="/cxc.jpeg" 
+                        src={cxc} 
                         alt="Accounts Receivable Interface" 
                         className="w-full h-auto hover:scale-105 transition-transform duration-500" 
                       />
@@ -1170,13 +1181,13 @@ function App() {
                   <div className="flex flex-col items-center">
                     <p className="font-bold mb-3 text-slate-800">"Expedientes" Screen</p>
                     <a 
-                      href="/records.jpeg" 
+                      href={records}
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="block w-full overflow-hidden rounded-xl border border-slate-200 shadow-sm hover:shadow-lg transition-shadow bg-slate-50 min-h-[180px]"
                     >
                       <img 
-                        src="/records.jpeg" 
+                        src={records} 
                         alt="'Expedientes' Screen" 
                         className="w-full h-auto hover:scale-105 transition-transform duration-500" 
                       />
