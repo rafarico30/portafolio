@@ -1092,8 +1092,8 @@ useEffect(() => {
                 </h3>
                 <ul className="list-disc pl-6 space-y-2 text-slate-600 mb-4">
                   <li><strong className="text-slate-800">Frontend:</strong> React.js, Tailwind CSS</li>
-                  <li><strong className="text-slate-800">Backend:</strong> Node.js, Express (Si aplica)</li>
-                  <li><strong className="text-slate-800">Database:</strong> MongoDB / Firebase (Si aplica)</li>
+                  <li><strong className="text-slate-800">Backend:</strong> Node.js, Express</li>
+                  <li><strong className="text-slate-800">Database:</strong> MongoDB / Firebase</li>
                 </ul>
 
               </div>
