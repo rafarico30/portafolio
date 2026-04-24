@@ -76,7 +76,17 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   
-
+useEffect(() => {
+    if (activeModal) {
+      
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [activeModal])
   
   return (
     <div className="min-h-screen bg-white font-sans selection:bg-brand-blue selection:text-white">
