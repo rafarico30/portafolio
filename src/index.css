@@ -59,7 +59,7 @@
 .delay-400 { animation-delay: 400ms; }
 
 body {
-  background-color: #ffffff;
+  background-color: #0A192F;
   color: var(--color-brand-text);
   overflow-x: hidden;
 }
