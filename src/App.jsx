@@ -175,43 +175,41 @@ function App() {
 
         {/* Columna Derecha: Imagen y Redes Sociales */}
         <div className="lg:col-span-5 relative flex justify-center lg:justify-end order-1 lg:order-2 opacity-0 animate-fade-in-right delay-400">
-          
-          {/* Contenedor de la foto con fondo azul */}
-          <div className="bg-brand-nav rounded-3xl w-full max-w-[320px] md:max-w-[380px] h-[450px] md:h-[550px] relative overflow-hidden shadow-2xl hover:shadow-brand-blue/20 transition-shadow duration-500">
-            
-            <img 
-              src={hero}
-              alt="Rafael Rico" 
-              className="absolute bottom-0 w-full h-auto object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-500"
-            />
-          </div>
-
-          {/* Iconos de Contacto (Flotantes a la derecha) */}
-<div className="absolute -right-4 md:-right-10 top-1/2 transform -translate-y-1/2 flex flex-col gap-6 bg-white/80 backdrop-blur-sm p-3 rounded-2xl shadow-lg border border-slate-100">
-  <a 
-    href="https://linkedin.com/in/rafael-rico-ayala" 
-    target="_blank" 
-    rel="noreferrer" 
-    className="hover:scale-110 transition-transform block"
-  >
-    {/* Imagen importada desde la carpeta public */}
+  
+  {/* Contenedor de la foto corregido */}
+  <div className="bg-brand-nav rounded-3xl w-full max-w-[320px] md:max-w-sm h-[400px] md:h-[550px] relative overflow-hidden shadow-2xl hover:shadow-brand-blue/20 transition-shadow duration-500">
     <img 
-      src={linkedin}
-      alt="LinkedIn" 
-      className="w-7 h-7 object-contain" 
-    /> 
-  </a>
-  
-  <a href="mailto:rafarico08@gmail.com" className="text-brand-nav hover:text-brand-blue hover:scale-110 transition-transform">
-    <Mail size={28} strokeWidth={2} />
-  </a>
-  
-  <a href="tel:+524431078531" className="text-brand-nav hover:text-brand-blue hover:scale-110 transition-transform">
-    <Phone size={28} strokeWidth={2} />
-  </a>
-</div>
+      src={hero}
+      alt="Rafael Rico" 
+      className="absolute bottom-0 left-0 w-full h-full object-cover object-bottom grayscale contrast-125 hover:grayscale-0 transition-all duration-500"
+    />
+  </div>
 
-        </div>
+  {/* Iconos de Contacto (Flotantes a la derecha) */}
+  <div className="absolute -right-4 md:-right-10 top-1/2 transform -translate-y-1/2 flex flex-col gap-6 bg-white/80 backdrop-blur-sm p-3 rounded-2xl shadow-lg border border-slate-100">
+    <a 
+      href="https://linkedin.com/in/rafael-rico-ayala" 
+      target="_blank" 
+      rel="noreferrer" 
+      className="hover:scale-110 transition-transform block"
+    >
+      <img 
+        src={linkedin}
+        alt="LinkedIn" 
+        className="w-7 h-7 object-contain" 
+      /> 
+    </a>
+    
+    <a href="mailto:rafarico08@gmail.com" className="text-brand-nav hover:text-brand-blue hover:scale-110 transition-transform">
+      <Mail size={28} strokeWidth={2} />
+    </a>
+    
+    <a href="tel:+524431078531" className="text-brand-nav hover:text-brand-blue hover:scale-110 transition-transform">
+      <Phone size={28} strokeWidth={2} />
+    </a>
+  </div>
+
+</div>
       </main>
       </section>
     </Reveal>
@@ -234,7 +232,7 @@ function App() {
           </div>
           <h3 className="text-2xl font-bold text-slate-900 mb-2 mt-4">Frontend Developer</h3>
           <div className="flex items-start gap-2 text-slate-700 mb-6">
-            <MapPin size={18} className="mt-1 flex-shrink-0" />
+            <MapPin size={18} className="mt-1 shrink-0" />
             <span className="text-sm font-semibold leading-tight">Instituto Tecnológico de Morelia</span>
           </div>
           <p className="text-slate-800 leading-relaxed mb-10">
@@ -255,7 +253,7 @@ function App() {
           </div>
           <h3 className="text-2xl font-bold text-slate-900 mb-2 mt-4">Full Stack .NET Developer</h3>
           <div className="flex items-start gap-2 text-slate-700 mb-6">
-            <MapPin size={18} className="mt-1 flex-shrink-0" />
+            <MapPin size={18} className="mt-1 shrink-0" />
             <span className="text-sm font-semibold leading-tight">Arkinet S.A. de C.V.</span>
           </div>
           <p className="text-slate-800 leading-relaxed mb-10">
@@ -276,7 +274,7 @@ function App() {
           </div>
           <h3 className="text-2xl font-bold text-slate-900 mb-2 mt-4">Computer Science Teacher</h3>
           <div className="flex items-start gap-2 text-slate-700 mb-6">
-            <MapPin size={18} className="mt-1 flex-shrink-0" />
+            <MapPin size={18} className="mt-1 shrink-0" />
             <span className="text-sm font-semibold leading-tight">Secundaria Particular Vasco de Quiroga</span>
           </div>
           <p className="text-slate-800 leading-relaxed mb-10">
@@ -318,7 +316,7 @@ function App() {
           {/* Tarjeta 1: Templo - El botón ahora tiene las clases de grid */}
           <button
             onClick={() => setActiveModal('project_templo')}
-            className="col-span-2 order-1 lg:order-none bg-[#0A192F] rounded-[1.5rem] lg:rounded-[2rem] p-4 lg:p-6 text-white h-[140px] sm:h-[180px] lg:h-[260px] flex items-center justify-between shadow-xl transition-transform hover:scale-[1.02] active:scale-95 text-left"
+            className="col-span-2 order-1 lg:order-0 bg-[#0A192F] rounded-3xl lg:rounded-4xl p-4 lg:p-6 text-white h-35 sm:h-45 lg:h-65 flex items-center justify-between shadow-xl transition-transform hover:scale-[1.02] active:scale-95 text-left"
           >
             <div className="z-10 w-[55%] lg:w-[50%] pl-1 lg:pl-2">
               <h3 className="text-sm sm:text-base lg:text-xl font-bold leading-tight mb-2 lg:mb-4">Templo Misericordia Web Platform</h3>
@@ -335,7 +333,7 @@ function App() {
           {/* Tarjeta 2: ERP */}
           <button
             onClick={() => setActiveModal('project_erp')}
-            className="col-span-1 order-2 lg:order-none bg-[#0A192F] rounded-[1.5rem] lg:rounded-[2rem] p-4 lg:p-6 text-white h-[200px] sm:h-[240px] lg:h-[400px] flex flex-col shadow-xl transition-transform hover:scale-[1.02] active:scale-95 text-left"
+            className="col-span-1 order-2 lg:order-0 bg-[#0A192F] rounded-3xl lg:rounded-4xl p-4 lg:p-6 text-white h-50 sm:h-60 lg:h-100 flex flex-col shadow-xl transition-transform hover:scale-[1.02] active:scale-95 text-left"
           >
             <div className="z-10 text-center mb-3 lg:mb-6 pt-1 lg:pt-2 w-full">
               <h3 className="text-[0.7rem] sm:text-sm lg:text-xl font-bold mb-2 lg:mb-4 leading-tight">Corporate ERP System Integrations</h3>
@@ -357,7 +355,7 @@ function App() {
           {/* Tarjeta 3: POS */}
           <button
             onClick={() => setActiveModal('project_pos')}
-            className="col-span-1 order-3 lg:order-none bg-[#0A192F] rounded-[1.5rem] lg:rounded-[2rem] p-4 lg:p-6 text-white h-[200px] sm:h-[240px] lg:h-[440px] flex flex-col shadow-xl transition-transform hover:scale-[1.02] active:scale-95 text-left"
+            className="col-span-1 order-3 lg:order-0 bg-[#0A192F] rounded-3xl lg:rounded-4xl p-4 lg:p-6 text-white h-50 sm:h-60 lg:h-110 flex flex-col shadow-xl transition-transform hover:scale-[1.02] active:scale-95 text-left"
           >
             <div className="z-10 text-center mb-3 lg:mb-6 pt-1 lg:pt-2 w-full">
               <h3 className="text-[0.7rem] sm:text-sm lg:text-xl font-bold mb-2 lg:mb-4 leading-tight">Full-Stack Retail POS System</h3>
@@ -369,14 +367,14 @@ function App() {
               </div>
             </div>
             <div className="flex-1 w-full rounded-xl lg:rounded-2xl overflow-hidden shadow-lg">
-              <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=1470&auto=format&fit=crop" className="w-full h-full object-cover" alt="Retail POS" />
+              <img src="https://images.unsplash.com/photo-1611703624394-2681b86b0e5a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="w-full h-full object-cover" alt="Retail POS" />
             </div>
           </button>
 
           {/* Tarjeta 4: Productivity */}
           <button
             onClick={() => setActiveModal('project_productivity')}
-            className="col-span-2 order-4 lg:order-none bg-[#0A192F] rounded-[1.5rem] lg:rounded-[2rem] p-4 lg:p-6 text-white h-[140px] sm:h-[180px] lg:h-[220px] relative shadow-xl flex items-center lg:items-start justify-between lg:justify-start transition-transform hover:scale-[1.02] active:scale-95 text-left"
+            className="col-span-2 order-4 lg:order-0 bg-[#0A192F] rounded-3xl lg:rounded-4xl p-4 lg:p-6 text-white h-35 sm:h-45 lg:h-55 relative shadow-xl flex items-center lg:items-start justify-between lg:justify-start transition-transform hover:scale-[1.02] active:scale-95 text-left"
           >
             <div className="z-10 w-[55%] relative pl-1 lg:pl-2 lg:pt-2">
               <h3 className="text-sm sm:text-base lg:text-[1.15rem] font-bold leading-tight mb-2 lg:mb-4">Productivity & Habit Tracking App</h3>
@@ -450,9 +448,9 @@ function App() {
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
       
       {/* TARJETA IZQUIERDA (Universidad) */}
-      <div className="bg-[#F3F4F8] rounded-[2rem] overflow-hidden flex flex-col shadow-sm border border-slate-100/50 hover:shadow-md transition-shadow">
+      <div className="bg-[#F3F4F8] rounded-4xl overflow-hidden flex flex-col shadow-sm border border-slate-100/50 hover:shadow-md transition-shadow">
         {/* Contenedor de Imagen */}
-        <div className="h-[280px] w-full bg-slate-200">
+        <div className="h-70 w-full bg-slate-200">
           <img 
             src={graduation} 
             className="w-full h-full object-cover" 
@@ -479,7 +477,7 @@ function App() {
       <div className="flex flex-col gap-6">
         
         {/* Tarjeta Superior (Licensure) */}
-        <div className="bg-[#F3F4F8] rounded-[2rem] p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between shadow-sm border border-slate-100/50 hover:shadow-md transition-shadow gap-6">
+        <div className="bg-[#F3F4F8] rounded-4xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between shadow-sm border border-slate-100/50 hover:shadow-md transition-shadow gap-6">
           <div className="flex-1">
             <div className="flex items-center gap-4 mb-4">
               <div className="w-14 h-14 bg-[#0A192F] rounded-2xl flex items-center justify-center shrink-0">
@@ -493,10 +491,10 @@ function App() {
           </div>
           
           {/* Contenedor de Imagen Derecha */}
-          <div className="w-full sm:w-[180px] h-[200px] shrink-0 rounded-2xl overflow-hidden bg-slate-200">
+          <div className="w-full md:w-1/2 max-w-sm mx-auto rounded-2xl overflow-hidden aspect-square md:aspect-4/3 bg-blue-100 shadow-md">
             <img 
               src={me}
-              className="w-full h-full object-cover" 
+              className="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105" 
               alt="Signing Document" 
             />
           </div>
@@ -506,7 +504,7 @@ function App() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 flex-1">
           
           {/* Tarjeta Inferior Izquierda (Google UX) */}
-          <div className="bg-[#F3F4F8] rounded-[2rem] p-8 flex flex-col justify-center shadow-sm border border-slate-100/50 hover:shadow-md transition-shadow text-center sm:text-left items-center sm:items-start">
+          <div className="bg-[#F3F4F8] rounded-4xl p-8 flex flex-col justify-center shadow-sm border border-slate-100/50 hover:shadow-md transition-shadow text-center sm:text-left items-center sm:items-start">
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-12 bg-[#0A192F] rounded-xl flex items-center justify-center shrink-0">
                 <div className="w-3.5 h-3.5 bg-white rounded-full"></div>
@@ -519,7 +517,7 @@ function App() {
           </div>
 
           {/* Tarjeta Inferior Derecha (English) */}
-          <div className="bg-[#F3F4F8] rounded-[2rem] p-8 flex flex-col justify-center shadow-sm border border-slate-100/50 hover:shadow-md transition-shadow text-center sm:text-left items-center sm:items-start">
+          <div className="bg-[#F3F4F8] rounded-4xl p-8 flex flex-col justify-center shadow-sm border border-slate-100/50 hover:shadow-md transition-shadow text-center sm:text-left items-center sm:items-start">
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-12 bg-[#0A192F] rounded-xl flex items-center justify-center shrink-0">
                 <div className="w-3.5 h-3.5 bg-white rounded-full"></div>
@@ -554,7 +552,10 @@ function App() {
       {/* Ubicación (Columna 1) */}
       <div className="flex items-center gap-4">
         <MapPin size={28} className="shrink-0" />
-        <span className="text-xl font-medium">Morelia, Michoacán, México</span>
+        <a href='https://maps.app.goo.gl/mekLBUifTT8DkUWAA'
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="text-xl font-medium">Morelia, Michoacán, México</a>
       </div>
 
       {/* Teléfono (Columna 2) */}
@@ -611,7 +612,7 @@ function App() {
 
 {/* ---------------- MODALES DE EXPERIENCIA ---------------- */}
       {activeModal && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
+        <div className="fixed inset-0 z-100 flex items-center justify-center p-4 sm:p-6">
           {/* Fondo oscuro clickeable para cerrar */}
           <div 
             className="absolute inset-0 bg-[#032040]/60 backdrop-blur-sm transition-opacity"
@@ -1043,7 +1044,7 @@ function App() {
                       href={login}
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="block w-full overflow-hidden rounded-xl border border-slate-200 shadow-sm hover:shadow-lg transition-shadow bg-slate-100 min-h-[200px]"
+                      className="block w-full overflow-hidden rounded-xl border border-slate-200 shadow-sm hover:shadow-lg transition-shadow bg-slate-100 min-h-50"
                     >
                       <img 
                         src={login}
@@ -1061,7 +1062,7 @@ function App() {
                       href={habit1}
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="block w-full overflow-hidden rounded-xl border border-slate-200 shadow-sm hover:shadow-lg transition-shadow bg-slate-100 min-h-[200px]"
+                      className="block w-full overflow-hidden rounded-xl border border-slate-200 shadow-sm hover:shadow-lg transition-shadow bg-slate-100 min-h-50"
                     >
                       <img 
                         src={habit1} 
@@ -1149,7 +1150,7 @@ function App() {
                       href={cxc} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="block w-full overflow-hidden rounded-xl border border-slate-200 shadow-sm hover:shadow-lg transition-shadow bg-slate-50 min-h-[180px]"
+                      className="block w-full overflow-hidden rounded-xl border border-slate-200 shadow-sm hover:shadow-lg transition-shadow bg-slate-50 min-h-45"
                     >
                       <img 
                         src={cxc} 
@@ -1167,7 +1168,7 @@ function App() {
                       href={records}
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="block w-full overflow-hidden rounded-xl border border-slate-200 shadow-sm hover:shadow-lg transition-shadow bg-slate-50 min-h-[180px]"
+                      className="block w-full overflow-hidden rounded-xl border border-slate-200 shadow-sm hover:shadow-lg transition-shadow bg-slate-50 min-h-45"
                     >
                       <img 
                         src={records} 
